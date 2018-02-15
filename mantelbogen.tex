@@ -1,0 +1,70 @@
+\documentclass[a5paper]{scrbook}
+\input{header}
+
+%zusätzliche Packages nur für den Mantelbogen
+\usepackage[absolute]{textpos}  % Zum Positionieren der Grafiken
+\usepackage{rotating}           % Zum Drehen von Text
+\setlength{\parindent}{0pt}
+
+\begin{document}
+
+% VORDERSEITE, AUSSEN %
+\pagestyle{empty}
+\vspace*{30mm} \centering \fontsize{40}{48} \textbf{Tagungsheft}
+\normalsize
+
+\begin{textblock*}{148mm}[0,0](0mm,100mm)
+    \includegraphics[width=148mm]{logo_breit} 
+\end{textblock*}
+  
+% TeX denkt, dass die Seite noch leer ist und macht deswegen keinen
+% pagebreak. Das \null täuscht TeX und alle sind glücklich (bis auf die
+% Perfektionisten natürlich)
+\null
+\newpage
+
+% VORDERSEITE, INNEN %
+\vspace*{\fill}
+    \begin{tabular*}{0.77\textwidth}{ll}
+        \multicolumn{2}{l}{
+            \parbox{0.77\textwidth}{
+                Der Redaktionsschluss für diesen Text war am ENTER TEMRIN HIER. Wir freuen uns
+                sehr über Kommentare, Anregungen, Verbesserungsvorschläge,
+                Mitarbeit und Kuchen -- melde dich bei
+                \href{mailto:akzapf@mathphys.stura.uni-heidelberg.de}{akzapf@mathphys.stura.uni-heidelberg.de}.
+            }
+            \vspace{5cm}
+        }\\
+        V.\,i.\,S.\,d.\,P.: & Studienfachschaft Physik\\
+        & Universität Heidelberg \\
+        & Im Neuenheimer Feld 205, Raum 01.301\\
+        & 0\,62\,21 54\,-\,14\,999\\
+        & \href{mailto:fsphysik@mathphys.stura.uni-heidelberg.de}{fsphysik@mathphys.stura.uni-heidelberg.de}\\
+        & \url{http://mathphys.stura.uni-heidelberg.de}\\
+    \end{tabular*}
+
+    \vfill
+
+    \begin{textblock*}{203mm}[0,1](-7mm,290mm)
+        \begin{flushright}
+            \footnotesize
+            \href{http://mathphys.info}{Coverbild: URHEBER} \href{http://creativecommons.org/licenses/by-sa/4.0/}{(CC-BY-SA)}\\  
+        \end{flushright}
+    \end{textblock*}
+
+
+
+\null
+\newpage
+
+% RÜCKSEITE, INNEN %
+\pagestyle{empty}
+
+\null
+\newpage
+
+% RÜCKSEITE, AUSSEN %
+\pagestyle{empty}
+
+
+\end{document}
