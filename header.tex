@@ -29,3 +29,8 @@
 \fancyhead[LE]{\leftmark}
 \fancyhead[RO]{\rightmark}
 \fancyfoot[RO,LE]{\thepage}
+
+%Lied-Umgebung
+\newenvironment{lied}[2]%
+  {\section*{#1}\textit{#2}\\\begin{center}\texttt\bgroup\footnotesize}
+  {\egroup\end{center}\vspace{2cm}}
