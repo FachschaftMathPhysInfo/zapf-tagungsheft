@@ -21,3 +21,5 @@ Als Inspiration kann man sich das [Tagungsheft von Düsseldorf](http://zapf.wolf
 * Deadline für externe Werbung: nächste ZaPFen, Unternehmen: 15. April 23:55 Uhr
 * Redaktionsschluss intern: 15. April 23:55 Uhr
 * anschließend Überarbeiten und Druck
+* anschließend Überarbeiten und Druck
+
