@@ -7,7 +7,7 @@ Auf dem [Projektboard](https://github.com/FachschaftMathPhys/zapf-tagungsheft/pr
 
 Falls du Hilfe brauchst, dann melde ich bei `trix@`.
 
-Als Inspiration kann man sich das [Tagungsheft von Düsseldorf](http://zapf.wolfbyte.de/Tagungsheft.pdf) anschauen.
+Als Inspiration kann man sich das [Tagungsheft von Düsseldorf](http://zapf.wolfbyte.de/Tagungsheft.pdf) anschauen und selber Gedanken zu unserem [vorläufigen Inhaltsverzeichnis](https://github.com/FachschaftMathPhys/zapf-tagungsheft/blob/master/INHALT.md) machen.
 
 ## vorläufige Roadmap
 * Deadline für externe Werbung: nächste ZaPFen, Unternehmen: 15. April 23:55 Uhr
