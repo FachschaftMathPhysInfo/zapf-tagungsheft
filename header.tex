@@ -22,6 +22,7 @@
 
 % Satzspiegel
 \geometry{inner=20mm, outer=15mm, top=15mm, bottom=25mm, heightrounded, marginparwidth=37mm, marginparsep=5mm}
+\setlength{\parindent}{0pt}
 
 %Headlines
 \pagestyle{fancy}
@@ -30,7 +31,17 @@
 \fancyhead[RO]{\rightmark}
 \fancyfoot[RO,LE]{\thepage}
 
-%Lied-Umgebung
+%Lied-Umgebung einspaltig
 \newenvironment{lied}[2]%
-  {\section*{#1}\textit{#2}\\\begin{center}\texttt\bgroup\footnotesize}
-  {\egroup\end{center}\vspace{2cm}}
+  {\section*{#1}\textit{#2}\\\\\bgroup\footnotesize}
+  {\egroup\vspace{1cm}}
+
+%Lied-Umgebung zweispaltig mit einspaltigem Titel 
+\newenvironment{lied*}[2]%
+  {\twocolumn[\section*{#1}\textit{#2}\\]\bgroup\footnotesize}
+  {\egroup\vspace{1cm}}  
+
+%Lied-Umgebung komplett zweispaltig oder einspaltig jenachdem wie es davor definiert war
+\newenvironment{lied**}[2]%
+  {\section*{#1}\textit{#2}\\\\\bgroup\footnotesize}
+  {\egroup\vspace{1cm}}    
