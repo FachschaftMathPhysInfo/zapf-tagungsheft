@@ -5,8 +5,14 @@
 \input{header}
 
 \begin{document}
-\input{chapters/go}
-\input{chapters/satzung}
+\setcounter{tocdepth}{1} %sections werden noch aufgelistet, subsections nicht mehr
+\tableofcontents
+
+\chapter{How To ZaPF}
+\input{chapters/zapf/go}
+\input{chapters/zapf/satzung}
+
+\chapter{Heidelberg}
 \input{chapters/heidelberg/fachschaft}
 
 \end{document}
