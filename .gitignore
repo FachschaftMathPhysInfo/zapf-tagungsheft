@@ -11,6 +11,9 @@
 *.cb
 *.cb2
 
+# pprobieren
+media/kirchhoff.JPG
+
 ## Intermediate documents:
 *.dvi
 *-converted-to.*
