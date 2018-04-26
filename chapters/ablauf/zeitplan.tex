@@ -1,0 +1,110 @@
+\section{Zeitplan}
+\newcommand{\daywidth}{2.2 cm}
+\newcommand{\h}{0.7cm}
+\usetikzlibrary{patterns}
+\begin{tikzpicture}[x=\daywidth, y=-0.7cm, node distance=0 cm,outer sep = 0pt]
+% Style for Days
+\tikzstyle{day}=[draw, rectangle,  minimum height=0.7cm, minimum width=\daywidth, fill=yellow!20,anchor=south west]
+% Style for Dates
+\tikzstyle{date}=[draw, rectangle,  minimum height=0.7cm, minimum width=\daywidth, fill=yellow!20,anchor=south west]
+% Style for hours
+\tikzstyle{hour}=[draw, rectangle, minimum height=0.7 cm, minimum width=1.5 cm, fill=yellow!30,anchor=north east]
+
+% Styles for events
+% Duration of sequences
+\tikzstyle{hours}=[rectangle,draw, minimum width=\daywidth, anchor=north west,text centered,text width=5 em,inner sep = -3pt]
+
+\tikzstyle{1hour}=[hours,minimum height=0.7cm]
+\tikzstyle{2hours}=[hours,minimum height=1.4cm]
+\tikzstyle{25hours}=[hours,minimum height=1.75cm]
+\tikzstyle{3hours}=[hours,minimum height=2.1cm]
+\tikzstyle{4hours}=[hours,minimum height=2.8cm]
+\tikzstyle{45hours}=[hours,minimum height=3.15cm]
+\tikzstyle{6hours}=[hours,minimum height=4.2cm]
+\tikzstyle{9hours}=[hours,minimum height=6.3cm]
+\tikzstyle{15hours}=[hours,minimum height=1.05cm]
+%Style for type of sequence 
+\tikzstyle{Ang2h}=[2hours,fill=blue!40]
+\tikzstyle{Anfangsplenum}=[6hours,fill=orange!20]
+\tikzstyle{Endplenum}=[9hours,fill=orange!20]
+\tikzstyle{Praesentation}=[15hours,fill=orange!20]
+\tikzstyle{Postersession}=[25hours,fill=orange!20]
+\tikzstyle{Abendstunde}=[1hour,fill=blue!20]
+\tikzstyle{Abendprogramm}=[4hours,fill=blue!20]
+\tikzstyle{Abendprogrammreloaded}=[3hours,fill=blue!20]
+\tikzstyle{Mittagessen}=[15hours,fill=blue!40]
+\tikzstyle{Aufstehen}=[15hours,fill=blue!40]
+\tikzstyle{Abendessen}=[15hours,fill=blue!40]
+\tikzstyle{AK}=[2hours, pattern=north east lines, pattern color=green]
+\tikzstyle{Pause}=[hours,minimum height = 0.35cm,fill=blue!40,inner sep = -3pt]
+\tikzstyle{Exkursion}=[45hours,fill=magenta!20]
+% Positioning labels for days and hours
+\node[day] (mittwoch) at (1,5) {Mittwoch};
+\node[day] (donnerstag) [right = of mittwoch] {Donnerstag};
+\node[day] (freitag) [right = of donnerstag] {Freitag};
+\node[day] (samstag) [right = of freitag] {Samstag};
+\node[day] (sonntag) [right = of samstag] {Sonntag};
+\node[date] (30-05) at (1,6) {30. Mai};
+\node[date] (31-05) [right = of 30-05] { $\dagger$ 31. Mai};
+\node[date] (01-06) [right = of 31-05] {1. Juni};
+\node[date] (02-06) [right = of 01-06] {2. Juni};
+\node[date] (03-06) [right = of 02-06] {3. Juni};
+\node[hour] (6-7) at (1,6) {6-7};
+\node[hour] (7-8) [below = of 6-7] {7-8};
+\node[hour] (8-9) [below = of 7-8] {8-9};
+\node[hour] (9-10) [below = of 8-9] {9-10};
+\node[hour] (10-11) [below= of 9-10] {10-11};
+\node[hour] (11-12) [below = of 10-11] {11-12};
+\node[hour] (12-13) [below  = of 11-12] {12-13};
+\node[hour] (13-14) [below = of 12-13] {13-14};
+\node[hour] (14-15) [below = of 13-14] {14-15};
+\node[hour] (15-16) [below = of 14-15] {15-16};
+\node[hour] (16-17) [below = of 15-16] {16-17};
+\node[hour] (17-18) [below = of 16-17] {17-18};
+\node[hour] (18-19) [below = of 17-18] {18-19};
+\node[hour] (19-20) [below = of 18-19] {19-20};
+\node[hour] (20-21) [below = of 19-20] {20-21};
+\node[hour] (21-22) [below = of 20-21] {21-22};
+\node[hour] (22-23) [below = of 21-22] {22-23};
+\node[hour] (22-23) [below = of 22-23] {23-24};
+%Position of sequences
+\node[Ang2h] at (1,15) {Ankunft \& Chilli};
+\node[Anfangsplenum] at (1,17) {Anfangs-plenum};
+\node[Abendstunde] at (1,23) {\baselineskip=0pt\small Geselligkeit\par};
+\node[Aufstehen] at (2,6.5) {Frühstück};
+\node[Aufstehen] at (3,6.5) {Frühstück};
+\node[Aufstehen] at (4,7.5) {Frühstück};
+\node[Aufstehen] at (5,7.5) {Frühstück};
+\node[Mittagessen] at (2,12.5) {Mittagessen};
+\node[Mittagessen] at (3,12.5) {\baselineskip=0pt\footnotesize Mittagessen \tiny(Mensa A/B)\par};
+\node[Mittagessen] at (4,13.5) {Mittagessen};
+\node[AK] at (2,8) {AK I};
+\node[Pause] at (2,10) {\tiny Pause};
+\node[AK] at (2,10.5) {AK II};
+\node[AK] at (2,14) {AK III};
+\node[Pause] at (2,16) {\tiny Pause};
+\node[AK] at (2,16.5) {AK IV};
+
+\node[AK] at (4,9) {AK V};
+\node[Pause] at (4,11) {\tiny Pause};
+\node[AK] at (4,11.5) {AK VI};
+
+\node[AK] at (4,15) {AK VII};
+\node[Pause] at (4,17) {\tiny Pause};
+\node[AK] at (4,17.5) {BU--AK};
+
+%Abendprogramme
+\node[Abendprogramm] at (2,20) {Geselligkeit};
+\node[Abendprogramm] at (3,20) {Kneipen-tour};
+\node[Abendprogrammreloaded] at (4,21) {Party};
+\node[Abendessen] at (2,18.5) {Abendessen};
+\node[Abendessen] at (3,18.5) {Abendessen};
+\node[Abendessen] at (4,19.5) {Abendessen};
+
+\node[Exkursion] at (3,8) {Exkursionen};
+%Praesentationen
+\node[Praesentation] at (3,14) {\small AK--Vorstellung};
+\node[Pause] at (3,15.5) {\tiny Pause};
+\node[Postersession] at (3,16){\small Poster-session};
+\node[Endplenum] at (5,9){Endplenum};
+\end{tikzpicture}
