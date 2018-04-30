@@ -23,6 +23,7 @@
 \tikzstyle{6hours}=[hours,minimum height=4.2cm]
 \tikzstyle{9hours}=[hours,minimum height=6.3cm]
 \tikzstyle{15hours}=[hours,minimum height=1.05cm]
+\tikzstyle{55hours}=[hours,minimum height=3.85cm]
 %Style for type of sequence 
 \tikzstyle{Ang2h}=[2hours,fill=blue!40]
 \tikzstyle{Anfangsplenum}=[6hours,fill=orange!20]
@@ -30,6 +31,7 @@
 \tikzstyle{Praesentation}=[15hours,fill=orange!20]
 \tikzstyle{Postersession}=[25hours,fill=orange!20]
 \tikzstyle{Abendstunde}=[1hour,fill=blue!20]
+\tikzstyle{Grillen}=[55hours,fill=blue!20]
 \tikzstyle{Abendprogramm}=[4hours,fill=blue!20]
 \tikzstyle{Abendprogrammreloaded}=[3hours,fill=blue!20]
 \tikzstyle{Mittagessen}=[15hours,fill=blue!40]
@@ -69,7 +71,7 @@
 \node[hour] (22-23) [below = of 22-23] {23-24};
 %Position of sequences
 \node[Ang2h] at (1,15) {Ankunft \& Chilli};
-\node[Anfangsplenum] at (1,17) {Anfangs-plenum};
+\node[Anfangsplenum] at (1,17) {Anfangs-plenum \tiny (KIP, HS 1)};
 \node[Abendstunde] at (1,23) {\baselineskip=0pt\small Geselligkeit\par};
 \node[Aufstehen] at (2,6.5) {Frühstück};
 \node[Aufstehen] at (3,6.5) {Frühstück};
@@ -94,10 +96,10 @@
 \node[AK] at (4,17.5) {BU--AK};
 
 %Abendprogramme
-\node[Abendprogramm] at (2,20) {Geselligkeit};
+\node[Grillen] at (2,18.5) {Grillen \& Geselligkeit};
 \node[Abendprogramm] at (3,20) {Kneipen-tour};
 \node[Abendprogrammreloaded] at (4,21) {Party};
-\node[Abendessen] at (2,18.5) {Abendessen};
+%\node[Abendessen] at (2,18.5) {Abendessen};
 \node[Abendessen] at (3,18.5) {Abendessen};
 \node[Abendessen] at (4,19.5) {Abendessen};
 
@@ -106,5 +108,5 @@
 \node[Praesentation] at (3,14) {\small AK--Vorstellung};
 \node[Pause] at (3,15.5) {\tiny Pause};
 \node[Postersession] at (3,16){\small Poster-session};
-\node[Endplenum] at (5,9){Endplenum};
+\node[Endplenum] at (5,9){Endplenum \tiny (KIP, HS 1)};
 \end{tikzpicture}
