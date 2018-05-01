@@ -5,24 +5,42 @@
 \usepackage[absolute]{textpos}  % Zum Positionieren der Grafiken
 \usepackage{rotating}           % Zum Drehen von Text
 \setlength{\parindent}{0pt}
+\usepackage{background}
+\backgroundsetup{
+scale=1.1,
+angle=0,
+opacity=1,  %% adjust
+contents={\includegraphics[width=\paperwidth]{vangogh}}
+}
+\usepackage{geometry}
+\geometry{bottom=10mm}
 
 \begin{document}
 
 % VORDERSEITE, AUSSEN %
 \pagestyle{empty}
-\vspace*{30mm} \centering \fontsize{40}{48} \textbf{Tagungsheft}
+\begin{textblock}{50}(1,1)
+\includegraphics[width=50mm]{logo_breit} 
+\end{textblock}
+
+\vspace*{16cm} \centering \fontsize{40}{48} \textbf{Tagungsheft}
 \normalsize
 
-\begin{textblock*}{148mm}[0,0](0mm,100mm)
-    \includegraphics[width=148mm]{logo_breit} 
-\end{textblock*}
-  
+%\begin{textblock*}{148mm}[0,0](0mm,100mm)
+    %\includegraphics[width=148mm]{logo_breit} 
+%\end{textblock*}
+      
 % TeX denkt, dass die Seite noch leer ist und macht deswegen keinen
 % pagebreak. Das \null täuscht TeX und alle sind glücklich (bis auf die
 % Perfektionisten natürlich)
 \null
 \newpage
-
+\backgroundsetup{
+scale=1.1,
+angle=0,
+opacity=1,  %% adjust
+contents={}
+}
 % VORDERSEITE, INNEN %
 \vspace*{\fill}
     \begin{tabular*}{0.77\textwidth}{ll}
