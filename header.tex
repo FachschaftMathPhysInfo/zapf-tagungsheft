@@ -2,6 +2,8 @@
 
 \usepackage[ngerman]{babel}
 \usepackage[utf8]{inputenc}
+\usepackage{libertine}
+\usepackage{libertinust1math}
 \usepackage[T1]{fontenc}
 \usepackage{microtype}
 \usepackage{amsmath}
@@ -16,19 +18,23 @@
 \usepackage{hyperref}
 \usepackage{wrapfig}
 \usepackage{pdfpages}
+\usepackage{tocloft}
+\usepackage{subcaption}
+\usepackage{paralist}
 
 % Suche nach Grafiken in ./media und .:
 \graphicspath{{./media/}{./}}
 
 % Satzspiegel
 \geometry{inner=20mm, outer=15mm, top=15mm, bottom=25mm, heightrounded, marginparwidth=37mm, marginparsep=5mm}
-\setlength{\parindent}{0pt}
+%\setlength{\parindent}{0pt}
 
 %Headlines
 \pagestyle{fancy}
 \fancyhf{}
-\fancyhead[LE]{\leftmark}
-\fancyhead[RO]{\rightmark}
+\renewcommand{\headrulewidth}{0pt}
+%\fancyhead[LE]{\leftmark}
+%\fancyhead[RO]{\rightmark}
 \fancyfoot[RO,LE]{\thepage}
 
 %Lied-Umgebung einspaltig
@@ -45,3 +51,11 @@
 \newenvironment{lied**}[2]%
   {\section*{#1}\textit{#2}\\\\\bgroup\footnotesize}
   {\egroup\vspace{1cm}}    
+  
+%Lied-Umgebung zweispaltig ohne Untertitel
+\newenvironment{lied***}[1]%
+  {\twocolumn\section*{#1}\bgroup\footnotesize}
+  {\egroup\vspace{1cm}}  
+  
+%Unterdrückt Section und Subsection Nummern, also werden nur Chapter Nummer angezeigt
+  \setcounter{secnumdepth}{0}

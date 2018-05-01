@@ -1,18 +1,22 @@
 % !TEX TS-program = pdflatex
 % !TEX encoding = UTF-8 Unicode
 
-\documentclass[ngerman,a5paper, 11pt]{scrbook}
+\documentclass[ngerman,a5paper, 11pt, openany]{scrbook}
 \input{header}
 
 \begin{document}
-
+\addtocontents{toc}{\vspace{-2cm}}
+\addtocontents{toc}{~\hfill\textbf{Seite}\par}
+    
 \chapter{Vorwort}
 \input{chapters/vorwort/orgagruss}
 \input{chapters/vorwort/dekan}
 %Grußworte von Frau Busse
 
-\setcounter{tocdepth}{1} %sections werden noch aufgelistet, subsections nicht mehr
-\tableofcontents
+\newpage
+\setcounter{tocdepth}{1} %sections werden noch aufgelistet, subsections nicht mehr    
+\small\tableofcontents
+\normalsize
 
 \chapter{How To Survive}
 \input{chapters/survive/anlaufstellen}
@@ -21,6 +25,7 @@
 \input{chapters/survive/internet}
 \input{chapters/survive/schlafen_duschen}
 
+\includepdf[pages=-]{volumegraphicsanzeige}
 \chapter{Heidelberg}
 \input{chapters/heidelberg/heidelberg}
 \input{chapters/heidelberg/fakultaet}
@@ -28,11 +33,11 @@
 \input{chapters/heidelberg/kneipen}
 \input{chapters/heidelberg/mobilitaet}
 \input{chapters/heidelberg/fachschaft}
-\includepdf[pages=-]{volumegraphicsanzeige}
+\includepdf[pages=-]{wuerzburg}
 
 \chapter{Ablauf}
-\input{chapters/ablauf/zeitplan}
 \input{chapters/ablauf/schlossbeleuchtung}
+\input{chapters/ablauf/zeitplan}
 \input{chapters/ablauf/exkursionen}
 \includepdf[pages=-]{boon}
 
@@ -43,7 +48,7 @@
 \input{chapters/zapf/lieder}
 \input{chapters/zapf/glossar}
 \input{chapters/zapf/handzeichen}
-\includepdf[pages=-]{wuerzburg}
+
 
 \chapter{Danke}
 \input{chapters/danksagung}
