@@ -12,13 +12,14 @@
 %\draw (0,0) -- (20,0) -- (20,20) -- (0,20) -- (0,0); % Canvas
 % \draw (,) -- (,);
 
-\fill[orange!60] (4,7) rectangle (15,16);
+\fill[blue!20] (4,7) rectangle (15,16);
 \fill[yellow!20] (1,1) -- (1,19) -- (3,19) -- (3,4.5) -- (4,4.5) -- (4,7) -- (14,7) -- (14,5) -- (16,5) -- (16,1) -- (3,1) -- (1,1);
 \fill[gray!30] (16,1) rectangle (18,19);
+\fill[gray!30] (1,1) rectangle (3,19);
 \fill[gray!30] (14,5) rectangle (16,7);
 \fill[gray!30] (10,1) rectangle (15,3);
 \fill[green] (4,1) rectangle (7,3);
-\fill[green] (7,1) rectangle (10,3);
+\fill[orange!60] (7,1) rectangle (10,3);
 
 \draw (1,1) -- (18,1);
 \draw (1,1) -- (1,17);
@@ -79,7 +80,9 @@
 \node at (9.5,12) {\Huge \textbf{Terasse}};
 \node at (9.5,11) { \textbf{(nicht überdacht)}};
 \node at (5.5,2) {\Large \textbf{SR 1.404}};
-\node at (8.5,2) {\large \textbf{Tagungsbüro}};
+\node (tagungsbuero) at (8.5,2) {\Large \textbf{SR 1.403}};
+\node (tagungsbuerotext) at (8.5,0) {\huge \textbf{Tagungsbüro}};
+\draw (tagungsbuerotext) -- (tagungsbuero);
 \node[rotate=-90] at (19,9) {\LARGE \textbf{}};%Platzhalter
 \end{tikzpicture}
 
