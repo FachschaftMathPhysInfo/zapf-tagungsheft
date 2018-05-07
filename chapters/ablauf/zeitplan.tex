@@ -1,14 +1,22 @@
-\section{Zeitplan}
+% !TEX TS-program = pdflatex
+% !TEX encoding = UTF-8 Unicode
+% !TEX ROOT = ../../main.tex
+
+\thispagestyle{empty}
+\begin{center}\Huge \textbf{Zeitplan}\end{center}
+\vspace{1.5cm}
+
 \newcommand{\daywidth}{2.2 cm}
 \newcommand{\h}{0.7cm}
 \usetikzlibrary{patterns}
+
 \begin{tikzpicture}[x=\daywidth, y=-0.7cm, node distance=0 cm,outer sep = 0pt]
 % Style for Days
 \tikzstyle{day}=[draw, rectangle,  minimum height=0.7cm, minimum width=\daywidth, fill=yellow!20,anchor=south west]
 % Style for Dates
 \tikzstyle{date}=[draw, rectangle,  minimum height=0.7cm, minimum width=\daywidth, fill=yellow!20,anchor=south west]
 % Style for hours
-\tikzstyle{hour}=[draw, rectangle, minimum height=0.7 cm, minimum width=1.5 cm, fill=yellow!30,anchor=north east]
+\tikzstyle{hour}=[draw, rectangle, minimum height=0.7 cm, minimum width=1.25 cm, fill=yellow!30,anchor=north east]
 
 % Styles for events
 % Duration of sequences

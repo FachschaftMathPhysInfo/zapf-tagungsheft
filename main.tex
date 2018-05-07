@@ -5,9 +5,13 @@
 \input{header}
 
 \begin{document}
+
+\newgeometry	{inner=10mm, top=15mm, heightrounded}
 \addtocontents{toc}{\vspace{-2cm}}
 \addtocontents{toc}{~\hfill\textbf{Seite}\par}
-    
+
+\input{chapters/ablauf/zeitplan}    
+\restoregeometry
 \chapter{Vorwort}
 \input{chapters/vorwort/orgagruss}
 \input{chapters/vorwort/dekan}
@@ -38,7 +42,6 @@
 
 \chapter{Ablauf}
 \input{chapters/ablauf/schlossbeleuchtung}
-\input{chapters/ablauf/zeitplan}
 \input{chapters/ablauf/exkursionen}
 \input{chapters/ablauf/zoo}
 \includepdf[pages=-]{boon}
