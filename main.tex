@@ -1,12 +1,12 @@
 % !TEX TS-program = pdflatex
 % !TEX encoding = UTF-8 Unicode
 
-\documentclass[ngerman,a5paper, 11pt, openany]{scrbook}
+\documentclass[ngerman, 11pt, openany]{scrbook}
 \input{header}
 
 \begin{document}
 
-\newgeometry	{inner=10mm, top=15mm, heightrounded}
+\newgeometry	{papersize={154mm,216mm}, layout=a5paper, layouthoffset=3mm,     layoutvoffset=3mm, inner=10mm, top=15mm, heightrounded}
 \addtocontents{toc}{\vspace{-2cm}}
 \addtocontents{toc}{~\hfill\textbf{Seite}\par}
 
@@ -30,7 +30,7 @@
 \input{chapters/survive/internet}
 \input{chapters/survive/schlafen_duschen}
 
-\includepdf[pages=-]{volumegraphicsanzeige}
+\includepdf[pages=-, scale=1.02]{volumegraphicsanzeige}
 \chapter{Heidelberg}
 \input{chapters/heidelberg/heidelberg}
 \input{chapters/heidelberg/fakultaet}
@@ -38,13 +38,15 @@
 \input{chapters/heidelberg/mobilitaet}
 \input{chapters/heidelberg/kneipen}
 \input{chapters/heidelberg/fachschaft}
-\includepdf[pages=-]{wuerzburg}
+\vspace{-2cm}
+
+\includepdf[pages=-, scale=1.08]{wuerzburg}
 
 \chapter{Ablauf}
 \input{chapters/ablauf/schlossbeleuchtung}
 \input{chapters/ablauf/exkursionen}
 \input{chapters/ablauf/zoo}
-\includepdf[pages=-]{boon}
+\includepdf[pages=-, scale=1.01]{boon}
 
 \chapter{How To ZaPF}
 

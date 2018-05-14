@@ -1,4 +1,4 @@
-\documentclass[a5paper]{scrbook}
+\documentclass{scrbook}
 \input{header}
 
 %zusätzliche Packages nur für den Mantelbogen
@@ -20,7 +20,9 @@ contents={\includegraphics[width=\paperwidth]{vangogh}}
 % VORDERSEITE, AUSSEN %
 \pagestyle{empty}
 \centering
-\includegraphics[width=55mm]{logo_breit} 
+\vspace*{-10mm}
+
+\includegraphics[width=60mm]{logo_breit} 
 
 \vspace*{14cm} \centering \fontsize{40}{48} \textbf{Tagungsheft}
 \normalsize
@@ -99,7 +101,7 @@ contents={}
 % Campusplan
 \null
 \backgroundsetup{
-scale=1,
+scale=1.02,
 angle=90,
 opacity=1,  %% adjust
 contents={\includegraphics[width=\paperheight]{map}}
@@ -111,7 +113,7 @@ contents={\includegraphics[width=\paperheight]{map}}
 \pagestyle{empty}
 \null
 \backgroundsetup{
-scale=1.06,
+scale=1.075,
 angle=270,
 opacity=1,  %% adjust
 contents={\includegraphics[width=\paperheight]{altstadt}}
