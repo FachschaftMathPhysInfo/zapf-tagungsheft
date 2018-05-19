@@ -1,0 +1,132 @@
+\documentclass{scrbook}
+\input{header}
+
+%zusätzliche Packages nur für den Mantelbogen
+\usepackage[absolute]{textpos}  % Zum Positionieren der Grafiken
+\usepackage{rotating}           % Zum Drehen von Text
+\setlength{\parindent}{0pt}
+\usepackage{background}
+\backgroundsetup{
+scale=1.1,
+angle=0,
+opacity=1,  %% adjust
+contents={\includegraphics[width=\paperwidth]{vangogh}}
+}
+\usepackage{geometry}
+\geometry{bottom=10mm}
+
+\begin{document}
+
+% VORDERSEITE, AUSSEN %
+\pagestyle{empty}
+\centering
+\vspace*{-10mm}
+
+\includegraphics[width=60mm]{logo_breit} 
+
+\vspace*{14cm} \centering \fontsize{40}{48} \textbf{Tagungsheft}
+\normalsize
+
+%\begin{textblock*}{148mm}[0,0](0mm,100mm)
+    %\includegraphics[width=148mm]{logo_breit} 
+%\end{textblock*}
+      
+% TeX denkt, dass die Seite noch leer ist und macht deswegen keinen
+% pagebreak. Das \null täuscht TeX und alle sind glücklich (bis auf die
+% Perfektionisten natürlich)
+\null
+\newpage
+\backgroundsetup{
+scale=1.1,
+angle=0,
+opacity=1,  %% adjust
+contents={}
+}
+% VORDERSEITE, INNEN %
+\vspace*{\fill}
+    \begin{tabular*}{\textwidth}{ll}
+        \multicolumn{2}{l}{
+            \parbox{\textwidth}{
+                Der Redaktionsschluss für diesen Text war am 9. Mai 2018. Wir freuen uns
+                sehr über Kommentare, Anregungen, Verbesserungsvorschläge,
+                Mitarbeit und Kuchen -- melde dich bei
+                \href{mailto:akzapf@mathphys.stura.uni-heidelberg.de}{akzapf@mathphys.stura.uni-heidelberg.de}.
+            }
+            \vspace{1cm}
+        }\\
+	\multicolumn{2}{l}{
+	\parbox{0.77\textwidth}{
+       	\textbf{Bild Copyrights}
+       	\begin{tabbing}
+		Christoph Blattgerste \quad \quad \=  Titelbild (Cover)\\		
+		Henrik Reinstädtler\> Titelbild van Gogh Stil, ÖPNV Karte\\
+		Lennart Stipulkowski \> ExzellENTE, Schlossbeleuchtung, ZaPF Logo\\
+		Max Häberle \> Zoo Bilder\\
+		Max Menges\> 500€ gespart \\		
+		VRNextbike\footnotemark \> Karte mit Verleihstellen\\
+		OpenStreetMap\footnotemark \> Karte Neuenheimer Feld\\
+		XKCD\footnotemark \> Comics\\
+		Samuel Scherer\footnotemark \> Sonnenuntergang Altstadt (Rückseite)\\
+		Universität Heidelberg \> Restliche Bilder zur Geschichte\\
+		\>der Fakultät und Universität\\
+		
+
+		\end{tabbing}
+       	}
+      }\\  
+
+        \textbf{Impressum} &\\
+        Herausgeber & Studienfachschaft Physik, Universität Heidelberg \\
+        & Im Neuenheimer Feld 205, Raum 01.301\\
+        & 69120 Heidelberg\\
+        V.\,i.\,S.\,d.\,P. & Jan Gräfje\\
+        & Im Neuenheimer Feld 205, Raum 01.301\\
+        & 69120 Heidelberg\\
+    \end{tabular*}
+
+        \footnotetext[1]{www.vrnnextbike.de}
+        \footnotetext[2]{www.openstreetmap.org}
+        \footnotetext[3]{www.xkcd.com}
+        \footnotetext[4]{www.samuelscherer.de}                
+    \vfill
+
+
+
+
+\null
+\newpage
+
+% RÜCKSEITE, INNEN %
+\pagestyle{empty}
+% Campusplan
+\null
+\backgroundsetup{
+scale=1.02,
+angle=90,
+opacity=1,  %% adjust
+contents={\includegraphics[width=\paperheight]{map}}
+}
+
+\newpage
+
+% RÜCKSEITE, AUSSEN %
+\pagestyle{empty}
+\null
+\backgroundsetup{
+scale=1.075,
+angle=270,
+opacity=1,  %% adjust
+contents={\includegraphics[width=\paperheight]{altstadt}}
+}
+
+\vspace{2cm}
+\raggedright
+\hspace{-1.25cm}
+\includegraphics[angle=270, width=2cm]{media/exzellente}
+
+
+%\begin{textblock}{30}(8.8,1)
+%\includegraphics[width=50mm]{MathPhysInfoLogo} 
+%\end{textblock}
+\newpage
+\end{document}
