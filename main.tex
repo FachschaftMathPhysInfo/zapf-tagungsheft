@@ -1,48 +1,67 @@
 % !TEX TS-program = pdflatex
 % !TEX encoding = UTF-8 Unicode
 
-\documentclass[ngerman,a5paper, 11pt]{scrbook}
+\documentclass[ngerman, 11pt, openany]{scrbook}
 \input{header}
 
 \begin{document}
 
+\newgeometry	{papersize={154mm,216mm}, layout=a5paper, layouthoffset=3mm,     layoutvoffset=3mm, inner=10mm, top=15mm, heightrounded}
+\addtocontents{toc}{\vspace{-2cm}}
+\addtocontents{toc}{~\hfill\textbf{Seite}\par}
+
+\input{chapters/ablauf/zeitplan}    
+\restoregeometry
 \chapter{Vorwort}
 \input{chapters/vorwort/orgagruss}
-%Grußworte von Frau Busse und der Physik Fakultät
+\input{chapters/vorwort/dekan}
+%Grußworte von Frau Busse
 
-\setcounter{tocdepth}{1} %sections werden noch aufgelistet, subsections nicht mehr
-\tableofcontents
+\newpage
+\setcounter{tocdepth}{1} %sections werden noch aufgelistet, subsections nicht mehr    
+\small\tableofcontents
+\normalsize
 
-\input{chapters/survive}
+\chapter{How To Survive}
+\input{chapters/survive/anlaufstellen}
+\input{chapters/survive/gebaeude}
+\input{chapters/survive/kommunikationskanaele}
+\input{chapters/survive/essen}
+\input{chapters/survive/internet}
+\input{chapters/survive/schlafen_duschen}
 
+\includepdf[pages=-, scale=1.02]{volumegraphicsanzeige}
 \chapter{Heidelberg}
 \input{chapters/heidelberg/heidelberg}
 \input{chapters/heidelberg/fakultaet}
 \input{chapters/heidelberg/geschichte}
-\input{chapters/heidelberg/kneipen}
 \input{chapters/heidelberg/mobilitaet}
+\input{chapters/heidelberg/kneipen}
 \input{chapters/heidelberg/fachschaft}
-\includepdf[pages=-]{volumegraphicsanzeige}
+\vspace{-2cm}
+
+\includepdf[pages=-, scale=1.08]{wuerzburg}
 
 \chapter{Ablauf}
-%Zeitplan
 \input{chapters/ablauf/schlossbeleuchtung}
-%Stadtführung
-%Kolloquium?
 \input{chapters/ablauf/exkursionen}
+\input{chapters/ablauf/zoo}
+\includepdf[pages=-, scale=1.01]{boon}
 
 \chapter{How To ZaPF}
+
 \input{chapters/zapf/go}
 \input{chapters/zapf/satzung}
-\input{chapters/lieder}
-%Handzeichen
-%Glossar
+\input{chapters/zapf/lieder}
+\input{chapters/zapf/glossar}
+\input{chapters/zapf/handzeichen}
+
 
 \chapter{Danke}
 \input{chapters/danksagung}
 
 \input{chapters/sponsoren}
 
-%persönlicher AK Plan
+\input{chapters/akplan}
 
 \end{document}
